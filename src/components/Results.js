@@ -10,6 +10,7 @@ const Results = props => {
     wind,
     pressure,
     err,
+    icon,
     timezone
   } = props.weather;
 
@@ -22,9 +23,11 @@ const Results = props => {
     const sunsetTime = new Date(
       (sunset + timezone - 3600) * 1000
     ).toLocaleTimeString();
+
     content = (
       <div>
         <h2>Weather for: {city}</h2>
+        <img src={`http://openweathermap.org/img/wn/${icon}@2x.png`} alt="" />
         <h3>Date and time: {date}</h3>
         <h3>Temperature: {temp} &#176;C</h3>
         <h3>Sunrise at: {sunriseTime}</h3>

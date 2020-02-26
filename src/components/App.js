@@ -16,6 +16,7 @@ class App extends Component {
     temp: "",
     pressure: "",
     wind: "",
+    icon: "",
     err: ""
   };
 
@@ -29,6 +30,7 @@ class App extends Component {
     event.preventDefault();
     console.log("Submit confirmed");
     const API = `http://api.openweathermap.org/data/2.5/weather?q=${this.state.value}&APPID=${APIKEY}&units=metric`;
+    console.log(API);
 
     fetch(API)
       .then(response => {
@@ -49,6 +51,7 @@ class App extends Component {
           pressure: data.main.pressure,
           wind: data.wind.speed,
           city: data.name,
+          icon: data.weather[0].icon,
           timezone: data.timezone
         });
       })
@@ -64,7 +67,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        The Weather App
+        <h1 id="app-title">The Weather App</h1>
         <Form
           value={this.state.value}
           change={this.handleInputChange}
