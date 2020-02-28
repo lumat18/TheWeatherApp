@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import "./App.css";
 import Form from "./Form/Form";
 import Results from "./Results/Results";
+import Footer from "./Footer/Footer";
 
 const APIKEY = "8421c2958fcf22091ff67790b522214d";
 
@@ -75,6 +76,7 @@ class App extends Component {
         />
         <hr></hr>
         <Results weather={this.state} />
+        <Footer />
       </div>
     );
   }

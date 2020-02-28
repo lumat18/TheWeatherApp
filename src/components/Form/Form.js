@@ -3,14 +3,15 @@ import "./Form.css";
 
 const Form = props => {
   return (
-    <form className="inputForm" onSubmit={props.submit}>
+    <form className="input-form" onSubmit={props.submit}>
       <input
+        className="input-box"
         type="text"
         value={props.value}
         placeholder="Enter city name"
         onChange={props.change}
       />
-      <button>Search</button>
+      <button className="submit-button">Search</button>
     </form>
   );
 };
