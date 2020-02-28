@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import "./App.css";
-import Form from "./Form";
-import Results from "./Results";
+import Form from "./Form/Form";
+import Results from "./Results/Results";
 
 const APIKEY = "8421c2958fcf22091ff67790b522214d";
 
@@ -73,6 +73,7 @@ class App extends Component {
           change={this.handleInputChange}
           submit={this.handleCitySubmit}
         />
+        <hr></hr>
         <Results weather={this.state} />
       </div>
     );

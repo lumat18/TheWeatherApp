@@ -1,17 +1,32 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
-  background-color: burlywood;
+  background-image: linear-gradient(navy, blue);
+  width: 100%;
+  min-height: 100vh;
 }
 .App {
-  background-color: chocolate;
+  background-image: url(../assets/weather.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-color: #008f90;
   display: flex;
-  justify-content: center;
   flex-direction: column;
-  width: 300px;
+  width: 500px;
+  min-height: 100vh;
   margin-left: auto;
   margin-right: auto;
   padding: 30px;
 }
 
 #app-title {
-  font-size: 30px;
+  font-size: 50px;
+  color: lightskyblue;
+  text-shadow: 3px 3px darkblue;
+  font-family: "Luckiest Guy";
+  margin-bottom: 70px;
 }
